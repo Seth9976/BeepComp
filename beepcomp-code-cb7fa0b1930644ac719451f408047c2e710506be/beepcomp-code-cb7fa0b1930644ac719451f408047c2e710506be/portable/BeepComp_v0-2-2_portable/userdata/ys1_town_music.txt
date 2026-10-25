@@ -1,0 +1,111 @@
+/////////////////////////////////////////////////
+//  Ancient Ys Vanished Omen 1 (Falcom, 1987)  //
+//  Music from the opening town scene          //
+//                         "Fountain of Love"  //
+//                   Composer: Mieko Ishikawa  //
+//                      Album "Music from Ys"  //
+//                (c) Nihon Falcom Corporation //
+/////////////////////////////////////////////////
+
+@G
+
+MASTERVOLUME=60
+TEMPO=152
+DELAYTIME=395
+DELAYLEVEL=27
+
+V1=8 V2=8 V3=5 VD=10
+
+/// Channel 1 - Melody //////////////////////////
+
+@1
+
+ATTACKTIME=0
+PEAKLEVEL=95
+PEAKTIME=70
+DECAYTIME=40
+SUSTAINLEVEL=40
+RELEASETIME=80
+
+LFO=ON
+LFOWAIT=500
+LFOSPEED=6
+LFORANGE=30
+
+L8O4
+
+:DFA>C<B-:D FA>C<B-AB-AF
+G~~~~~~~ ~~~~~~~~
+:E-GB->DC:<E- GB->DC<B->C<B-G
+A~~~~~~~ ~~~~~~~~
+:DFA>C<B-:D FA>C<B-AB-AF
+G~~~~~~~ ~~~~~~~~
+:E-GB->DC:<B- A::B-::>C<:
+B-B-B-B-:B-:B- :B-:B->CC<B-:
+
+/// Channel 2 - Bass ////////////////////////////
+
+@2
+
+ATTACKTIME=0
+PEAKLEVEL=95
+PEAKTIME=100
+DECAYTIME=80
+SUSTAINLEVEL=40
+RELEASETIME=80
+
+L8O2
+
+B-::B- :::: B-::B- :B->CD
+E-::E- :::: E-::E- :E-DD
+C::C   :::: C::C   :CDE-
+F::F   :::: F::F   :<FGA
+
+B-::B- ::::  B-::B- :B->CD
+E-::E- ::::  E-::E- :E-DD
+C::C   :CDE- F<::F  :FGA
+A-::A- ::A-: A-::A- A-A-A-A-
+
+/// Channel 3 - Embelishment ////////////////////
+
+@3
+
+ATTACKTIME=0
+PEAKLEVEL=95
+PEAKTIME=70
+DECAYTIME=40
+SUSTAINLEVEL=40
+RELEASETIME=80
+
+LFO=ON
+LFOWAIT=500
+LFOSPEED=6
+LFORANGE=30
+
+L8O5
+
+D~~F~~B-~ D~~F~~B-~
+G~>D~C<B-~G ~~G~A~B-~
+E-~~G~~>C~ <E-~~G~~>C~<
+F~>F~E-D~C ~~C~D~E-~<
+
+D~~F~~B-~ D~~F~~B-~
+G~>D~C<B-~G ~~G~A~B-~
+E-~~G~~>C~ <F::F::F~
+B-B-B-B-:B-:B- :B-:B-B-B-B-B-
+
+/// Drum Channel ////////////////////////////////
+
+@D
+
+L8
+
+K::K ::[HH]H K::K ::S:
+K::K ::hH    K::K ::S[HH]
+K::K ::[HH]H K::K ::S:
+K::K ::hH    K::K ::S[HH]
+
+K::K ::[HH]H K::K ::S:
+K::K ::hH    K::K ::S[HH]
+K::K ::[HH]H K::K ::S:
+K::K ::S[hh] sSS[SS] [sS]k[KK]S  

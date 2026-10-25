@@ -1,0 +1,513 @@
+<?hml version='1.0' encoding='windows-1252'?>
+<Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'>
+
+	<Product Name='BeepComp' 
+		Id='2BB9BD67-0B46-4FC4-AEEF-D170D2AEF8FD'
+		UpgradeCode='8F81687A-D9C1-4711-AF2A-347CA54ADDD8'
+		Language='1033'
+		Codepage='1252'
+		Version='0.2.3'
+		Manufacturer='Gingerroot Soft'>
+	
+	<Package Id='*' Keywords='Installer' 
+		Description="BeepComp Installer"
+		Comments='This installs BeepComp in your machine.'
+		Manufacturer='Gingerroot Soft'
+		InstallerVersion='100' Languages='1033' Compressed='yes'
+		SummaryCodepage='1252' />
+
+	<Media Id='1' Cabinet='beepcomp.cab' EmbedCab='yes' DiskPrompt="CD-ROM #1" />
+
+	<Property Id='DiskPrompt' Value="BeepComp Installation [1]" />
+
+	
+	
+	<Directory Id="TARGETDIR" Name="SourceDir">
+
+
+
+	
+		<Directory Id="DesktopFolder" Name="Desktop">
+			<Component Id="ApplicationShortcutDesktop" Guid="*">
+				<Shortcut Id="ApplicationDesktopShortcut"
+						Name="BeepComp"
+						Description="Launch BeepComp"
+						Target="[INSTALLDIR]beepcomp.exe"
+						WorkingDirectory='INSTALLDIR'/>
+				<RemoveFolder Id="DesktopFolder" On="uninstall"/>
+					<RegistryValue
+						Root="HKCU"
+						Key='Software\[Manufacturer]\[ProductName]'
+						Name="installed"
+						Type="integer"
+						Value="1"
+						KeyPath="yes"/>
+			</Component>
+		</Directory>	
+
+
+	
+		<Directory Id="ProgramFilesFolder" Name="PFiles">
+			<Directory Id="INSTALLDIR" Name="BeepComp">
+			
+				<Component Id="removeInstallDir" Guid="{CE454BE4-82E7-4319-8275-21480B5DDC70}">
+					<RemoveFile Id="RemoveInstalledFiles" On ="uninstall" Name="*.*"/>
+					<RemoveFolder Id="RemoveInstallFolder" On="uninstall"/>
+				</Component>			
+			
+			
+			
+				<Component Id='cmp_beepcompEXE' Guid='{0F9FB186-268B-47BD-B448-A601C987780F}'>
+					<File Id="beepcompEXE" Name="beepcomp.exe" DiskId='1' Source='..\beepcomp.exe' KeyPath='yes'>
+						<Shortcut Id="startmenuBeepComp" Directory="ProgramMenuDir" Name="BeepComp" WorkingDirectory='INSTALLDIR' Icon="beepcomp_24.ico" IconIndex="0" Advertise="yes" />
+					</File>
+				</Component>
+				
+				<Component Id='cmp_libwinpthread_1DLL' Guid='*'>
+					<File Id="libwinpthread_1DLL" Name="libwinpthread-1.dll" 
+					DiskId='1' Source='..\libwinpthread-1.dll' KeyPath='yes'>				
+					</File>
+				</Component>				
+
+				<Component Id='cmp_libgcc_s_dw2_1DLL' Guid='*'>
+					<File Id="libgcc_s_dw2_1DLL" Name="libgcc_s_dw2-1.dll" 
+					DiskId='1' Source='..\libgcc_s_dw2-1.dll' KeyPath='yes'>				
+					</File>
+				</Component>
+	
+				<Component Id='cmp_libstdcpp_6DLL' Guid='*'>
+					<File Id="libstdcpp_6DLL" Name="libstdc++-6.dll" 
+					DiskId='1' Source='..\libstdc++-6.dll' KeyPath='yes'>				
+					</File>
+				</Component>
+
+				<Component Id='cmp_portaudio_x86DLL' Guid='*'>
+					<File Id="portaudio_x86DLL" Name="portaudio_x86.dll" 
+					DiskId='1' Source='..\portaudio_x86.dll' KeyPath='yes'>				
+					</File>
+				</Component>
+				
+				<Component Id='cmp_sfml_graphics_2DLL' Guid='*'>
+					<File Id="sfml_graphics_2DLL" Name="sfml-graphics-2.dll" 
+					DiskId='1' Source='..\sfml-graphics-2.dll' KeyPath='yes'>				
+					</File>
+				</Component>
+
+				<Component Id='cmp_sfml_system_2DLL' Guid='*'>
+					<File Id="sfml_system_2DLL" Name="sfml-system-2.dll" 
+					DiskId='1' Source='..\sfml-system-2.dll' KeyPath='yes'>				
+					</File>
+				</Component>
+
+				<Component Id='cmp_sfml_window_2DLL' Guid='*'>
+					<File Id="sfml_window_2DLL" Name="sfml-window-2.dll" 
+					DiskId='1' Source='..\sfml-window-2.dll' KeyPath='yes'>				
+					</File>
+				</Component>
+
+				<Component Id='cmp_libsndfile_1DLL' Guid='*'>
+					<File Id="libsndfile_1DLL" Name="libsndfile-1.dll" 
+					DiskId='1' Source='..\libsndfile-1.dll' KeyPath='yes'>				
+					</File>
+				</Component>
+				
+				<Component Id='cmp_libmp3lame_0DLL' Guid='*'>
+					<File Id="libmp3lame_0DLL" Name="libmp3lame-0.dll" 
+					DiskId='1' Source='..\libmp3lame-0.dll' KeyPath='yes'>				
+					</File>
+				</Component>
+
+				<Component Id="UniversalSpeechDLL" Guid="{568FA094-FF3C-4EAA-B9DB-36A250E9B706}">
+					<File Id="UniversalSpeechDLL" Name="UniversalSpeech.dll"
+					KeyPath="yes" Source="..\lib\bin\UniversalSpeech.dll" />
+				</Component>
+
+				<Component Id="nvdaControllerClientDLL" Guid="{41778CED-A5EA-4897-9303-C4751E4066B5}">
+					<File Id="nvdaControllerClientDLL" Name="nvdaControllerClient.dll"
+					KeyPath="yes" Source="..\lib\bin\nvdaControllerClient.dll" />
+				</Component>
+
+				<Component Id="SAAPI32DLL" Guid="{5A2F997B-097E-42EC-8B5A-1D37A23ADE61}">
+					<File Id="SAAPI32DLL" Name="SAAPI32.dll"
+					KeyPath="yes" Source="..\lib\bin\SAAPI32.dll" />
+				</Component>			
+				
+				<Component Id='cmp_READMETXT' Guid='*'>
+					<File Id="READMETXT" Name="README.txt" 
+					DiskId='1' Source='..\README.txt' KeyPath='yes'>				
+					</File>
+				</Component>
+
+				<Component Id='cmp_LICENSETXT' Guid='*'>
+					<File Id="LICENSETXT" Name="LICENSE.txt" 
+					DiskId='1' Source='..\LICENSE.txt' KeyPath='yes'>				
+					</File>
+				</Component>
+
+				
+		
+				
+				<Component Id='cmp_defaultTXT' Guid='*'>
+					<File Id="defaultTXT" Name="default.txt" 
+					DiskId='1' Source='..\default.txt' KeyPath='yes'>				
+					</File>
+				</Component>
+
+
+				
+				<Directory Id="FontDir" Name="fonts">
+
+					<Component Id="removeFontDir" Guid="{EF0CA272-EAF9-4082-B3A5-8B7796F77FB3}">
+						<RemoveFile Id="RemoveAllFontFiles" On ="uninstall" Name="*.*"/>
+						<RemoveFolder Id="RemoveFontFolder" On="uninstall"/>
+					</Component>
+				
+					<Component Id='cmp_UbuntuMono_RTTF' Guid='*'>
+						<File Id="UbuntuMono_RTTF" Name="UbuntuMono-R.ttf" 
+						DiskId='1' Source='..\fonts\UbuntuMono-R.ttf' KeyPath="yes">				
+						</File>
+					</Component>			
+
+					<Component Id='cmp_ZERO4B09TTF' Guid='*'>
+						<File Id="ZERO4B09TTF" Name="04B09.ttf" 
+						DiskId='1' Source='..\fonts\04B09.ttf' KeyPath="yes">				
+						</File>
+					</Component>
+					
+					<Component Id='cmp_ubuntu_font_licenseTXT' Guid='*'>
+						<File Id="ubuntu_font_licenseTXT" Name="ubuntu_font_license.txt" 
+						DiskId='1' Source='..\fonts\ubuntu_font_license.txt' KeyPath="yes">				
+						</File>
+					</Component>
+
+					<Component Id='cmp_ZERO4B09_font_licenseTXT' Guid='*'>
+						<File Id="ZERO4B09_font_licenseTXT" Name="04B09_font_license.txt" 
+						DiskId='1' Source='..\fonts\04B09_font_license.txt' KeyPath="yes">				
+						</File>
+					</Component>
+					
+				</Directory>
+				
+				
+				<Directory Id="ImagesDir" Name="images" >
+				
+					<Component Id="removeImagesDir" Guid="{4A40B8C6-4A78-4489-B1A8-F03C6D3EF84F}">
+						<RemoveFile Id="RemoveAllImageFiles" On ="uninstall" Name="*.*"/>
+						<RemoveFolder Id="RemoveImagesFolder" On="uninstall"/>
+					</Component>
+					
+					<Component Id='cmp_beepcomp_iconPNG' Guid='*'>
+						<File Id="beepcomp_iconPNG" Name="beepcomp_icon.png" 
+						DiskId='1' Source='..\images\beepcomp_icon.png' KeyPath='yes'>				
+						</File>		
+					</Component>
+
+					<Component Id='cmp_beepcomp_logoPNG' Guid='*'>
+						<File Id="beepcomp_logoPNG" Name="beepcomp_logo.png" 
+						DiskId='1' Source='..\images\beepcomp_logo.png' KeyPath='yes'>				
+						</File>		
+					</Component>
+				
+					<Component Id='cmp_fighter_1PNG' Guid='*'>
+						<File Id="fighter_1PNG" Name="fighter_1.png" 
+						DiskId='1' Source='..\images\fighter_1.png' KeyPath='yes'>				
+						</File>		
+					</Component>
+				
+					<Component Id='cmp_fighter_2PNG' Guid='*'>
+						<File Id="fighter_2PNG" Name="fighter_2.png" 
+						DiskId='1' Source='..\images\fighter_2.png' KeyPath='yes'>				
+						</File>		
+					</Component>
+					
+				</Directory>
+
+				
+				<Directory Id="DocumentationDir" Name="documentation" >
+				
+					<Component Id="removeDocumentationDir" Guid="{9DFFCC03-28DD-4DE3-B6BF-16ECF7739AE6}">
+						<RemoveFile Id="RemoveAllDocFiles" On ="uninstall" Name="*.*"/>
+						<RemoveFolder Id="RemoveDocumentationFolder" On="uninstall"/>
+					</Component>
+					
+					<Component Id='cmp_beepcomp_users_guideHTML' Guid='{CC91693D-5AED-4A08-B997-E5353BF07C06}'>
+						<File Id="beepcomp_users_guideHTML" Name="beepcomp_users_guide.html" 
+						DiskId='1' Source='..\documentation\beepcomp_users_guide.html' KeyPath='yes'>
+							<Shortcut Id="startmenuDocumentation" Directory="ProgramMenuDir" Name="User's Guide" WorkingDirectory='DocumentationDir' Icon="documentation_24.ico" IconIndex="0" Advertise="yes" />						
+						</File>
+					</Component>
+
+					<Component Id='cmp_beepcomp_screen_explainPNG' Guid='*'>
+						<File Id="beepcomp_screen_explainPNG" Name="beepcomp_screen_explain.png" 
+						DiskId='1' Source='..\documentation\beepcomp_screen_explain.png' KeyPath='yes'>				
+						</File>		
+					</Component>
+
+					<Component Id='cmp_beepcomp_volume_envelopePNG' Guid='*'>
+						<File Id="beepcomp_volume_envelopePNG" Name="beepcomp_volume_envelope.png" 
+						DiskId='1' Source='..\documentation\beepcomp_volume_envelope.png' KeyPath='yes'>				
+						</File>		
+					</Component>
+					
+				</Directory>
+				
+				
+				<Directory Id="UserDataDir" Name="userdata" >
+					
+					<Component Id="removeUserDataDir" Guid="{96D7359E-844F-4846-A393-0011565B8503}">
+						<RemoveFile Id="RemoveTxtFiles" On ="uninstall" Name="*.txt"/>
+						<RemoveFolder Id="RemoveUserDataFolder" On="uninstall"/>
+					</Component>
+					
+					<Component Id='cmp_xanaduTXT' Guid='*' >
+						<File Id="xanaduTXT" Name="xanadu.txt" 
+						DiskId='1' Source='..\userdata\xanadu.txt' KeyPath='yes'>				
+						</File>
+					</Component>
+					
+					<Component Id='cmp_some_funky_tuneTXT' Guid='*' >
+						<File Id="some_funky_tuneTXT" Name="some_funky_tune.txt" 
+						DiskId='1' Source='..\userdata\some_funky_tune.txt' KeyPath='yes'>				
+						</File>
+					</Component>
+						
+					<Component Id='cmp_romanciaTXT' Guid='*' >
+						<File Id="romanciaTXT" Name="romancia.txt" 
+						DiskId='1' Source='..\userdata\romancia.txt' KeyPath='yes'>				
+						</File>
+					</Component>
+
+					<Component Id='cmp_ys1_field_musicTXT' Guid='*' >
+						<File Id="ys1_field_musicTXT" Name="ys1_field_music.txt" 
+						DiskId='1' Source='..\userdata\ys1_field_music.txt' KeyPath='yes'>				
+						</File>
+					</Component>
+						
+					<Component Id='cmp_ys1_town_musicTXT' Guid='*' >
+						<File Id="ys1_town_musicTXT" Name="ys1_town_music.txt" 
+						DiskId='1' Source='..\userdata\ys1_town_music.txt' KeyPath='yes'>				
+						</File>
+					</Component>
+					
+					<Component Id='cmp_ys2_palace_of_salmonTXT' Guid='*' >
+						<File Id="ys2_palace_of_salmonTXT" Name="ys2_palace_of_salmon.txt" 
+						DiskId='1' Source='..\userdata\ys2_palace_of_salmon.txt' KeyPath='yes'>				
+						</File>
+					</Component>
+					
+					<Component Id='cmp_ys2_to_make_the_end_of_battleTXT' Guid='*' >
+						<File Id="ys2_to_make_the_end_of_battleTXT" Name="ys2_to_make_the_end_of_battle.txt" 
+						DiskId='1' Source='..\userdata\ys2_to_make_the_end_of_battle.txt' KeyPath='yes'>				
+						</File>
+					</Component>
+					
+					<Component Id='cmp_astro_wars_1TXT' Guid='*' >
+						<File Id="astro_wars_1TXT" Name="astro_wars_1.txt" 
+						DiskId='1' Source='..\userdata\astro_wars_1.txt' KeyPath='yes'>				
+						</File>
+					</Component>
+					
+					<Component Id='cmp_pure_psg_toneTXT' Guid='*' >
+						<File Id="pure_psg_toneTXT" Name="pure_psg_tone.txt" 
+						DiskId='1' Source='..\userdata\pure_psg_tone.txt' KeyPath='yes'>				
+						</File>
+					</Component>
+					
+					<Component Id='cmp_astro_effectTXT' Guid='*' >
+						<File Id="astro_effectTXT" Name="astro_effect.txt" 
+						DiskId='1' Source='..\userdata\astro_effect.txt' KeyPath='yes'>				
+						</File>
+					</Component>
+				
+					<Component Id='cmp_bach_prelude_c_minTXT' Guid='*' >
+						<File Id="bach_prelude_c_minTXT" Name="bach_prelude_c_min.txt" 
+						DiskId='1' Source='..\userdata\bach_prelude_c_min.txt' KeyPath='yes'>				
+						</File>
+					</Component>
+					
+					<Component Id='cmp__tutorial_basic_1TXT' Guid='*' >
+						<File Id="cmp__tutorial_basic_1TXT" Name="_tutorial_basic_1.txt" 
+						DiskId='1' Source='..\userdata\_tutorial_basic_1.txt' KeyPath='yes'>				
+						</File>
+					</Component>					
+
+					<Component Id='cmp__tutorial_repeatsTXT' Guid='*' >
+						<File Id="cmp__tutorial_repeatsTXT" Name="_tutorial_repeats.txt" 
+						DiskId='1' Source='..\userdata\_tutorial_repeats.txt' KeyPath='yes'>				
+						</File>
+					</Component>
+					
+					<Component Id='cmp__tutorial_drumsTXT' Guid='*' >
+						<File Id="cmp__tutorial_drumsTXT" Name="_tutorial_drums.txt" 
+						DiskId='1' Source='..\userdata\_tutorial_drums.txt' KeyPath='yes'>				
+						</File>
+					</Component>
+					
+					<Component Id='cmp__tutorial_drum_shapingTXT' Guid='*' >
+						<File Id="cmp__tutorial_drum_shapingTXT" Name="_tutorial_drum_shaping.txt" 
+						DiskId='1' Source='..\userdata\_tutorial_drum_shaping.txt' KeyPath='yes'>				
+						</File>
+					</Component>
+
+					<Component Id='cmp__tutorial_delayTXT' Guid='*' >
+						<File Id="cmp__tutorial_delayTXT" Name="_tutorial_delay.txt" 
+						DiskId='1' Source='..\userdata\_tutorial_delay.txt' KeyPath='yes'>
+						</File>
+					</Component>
+				
+					<Component Id='cmp__helpful_tipsTXT' Guid='*' >
+						<File Id="cmp__helpful_tipsTXT" Name="_helpful_tips.txt" 
+						DiskId='1' Source='..\userdata\_helpful_tips.txt' KeyPath='yes'>
+						</File>
+					</Component>
+
+					
+				</Directory>
+				
+				<Component Id="UninstallShortcutMenu" Guid="{353BFD4C-AC67-42B3-829C-68291E11B34B}">
+					<Shortcut Id="UninstallProduct" Name="Uninstall BeepComp"
+					Target="[SystemFolder]msiexec.exe" Directory="ProgramMenuDir"
+					Arguments="/x [ProductCode]" />
+					<RemoveFolder Id="INSTALLDIR" On="uninstall" />
+					<RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Name="installed" Type="integer"
+					Value="1" KeyPath="yes" />
+				</Component>
+				
+				
+			</Directory>
+		</Directory>
+		
+		
+		<Directory Id="ProgramMenuFolder" Name="Programs">
+			<Directory Id="ProgramMenuDir" Name="BeepComp">
+
+				<Component Id="ProgramMenuDir" Guid="*">
+					<RemoveFolder Id='ProgramMenuDir' On='uninstall' />
+					<RegistryValue Root='HKCU' Key='Software\[Manufacturer]\[ProductName]' Type='string' Value='' KeyPath='yes' />
+				</Component>
+
+			</Directory>
+        </Directory>
+		
+		
+		<Directory Id="AppDataFolder">
+			<Directory Id="BeepCompAppFolder" Name="BeepComp">
+
+				<Component Id="removeConfigDir" Guid="{EDE85211-F705-4392-A427-7DA5229AC646}">
+					<RemoveFile Id="RemoveAllConfigFiles" On ="uninstall" Name="*.*"/>
+					<RemoveFolder Id="RemoveConfigFolder" On="uninstall" />
+					
+					<RegistryValue Root='HKCU' Key='Software\[Manufacturer]\[ProductName]'
+					Type='string'
+					Name='config_folder'
+					Value="installed"
+					KeyPath='yes' />
+				</Component>			
+			
+				<Component Id="cmp_beepcompCONFIG" 
+				Guid="{F398CA9F-7DA3-4B50-801F-F310894DE7D5}">
+					<RegistryValue Root='HKCU' Key='Software\[Manufacturer]\[ProductName]'
+					Type='string'
+					Name='config_file'
+					Value="installed"
+					KeyPath='yes' />
+					<File Id="beepcompCONFIG" Source="..\beepcomp.config">
+					</File>
+				</Component>
+				
+			</Directory>
+		</Directory>
+		
+		
+	</Directory>
+	
+	
+    <Feature Id='Complete' Level='1'>
+
+		<ComponentRef Id='ApplicationShortcutDesktop' />
+
+		<ComponentRef Id="removeInstallDir" />
+
+		<ComponentRef Id='cmp_beepcompEXE' />
+		<ComponentRef Id='cmp_libwinpthread_1DLL' />
+		<ComponentRef Id='cmp_libgcc_s_dw2_1DLL' />
+		<ComponentRef Id='cmp_libstdcpp_6DLL' />
+		<ComponentRef Id='cmp_portaudio_x86DLL' />
+		<ComponentRef Id='cmp_sfml_graphics_2DLL' />
+		<ComponentRef Id='cmp_sfml_system_2DLL' />
+		<ComponentRef Id='cmp_sfml_window_2DLL' />
+		<ComponentRef Id='cmp_libsndfile_1DLL' />
+		<ComponentRef Id='cmp_libmp3lame_0DLL' />
+		
+		<ComponentRef Id='UniversalSpeechDLL' />
+		<ComponentRef Id='nvdaControllerClientDLL' />
+		<ComponentRef Id='SAAPI32DLL' />			
+				
+		<ComponentRef Id='cmp_READMETXT' />
+		<ComponentRef Id='cmp_LICENSETXT' />
+		
+		<ComponentRef Id='cmp_defaultTXT' />
+		
+		<ComponentRef Id="removeFontDir" />
+		
+		<ComponentRef Id='cmp_UbuntuMono_RTTF' />
+		<ComponentRef Id='cmp_ZERO4B09TTF' />
+		<ComponentRef Id='cmp_ubuntu_font_licenseTXT' />
+		<ComponentRef Id='cmp_ZERO4B09_font_licenseTXT' />
+		
+		<ComponentRef Id="removeImagesDir" />
+
+		<ComponentRef Id='cmp_beepcomp_iconPNG' />
+		<ComponentRef Id='cmp_beepcomp_logoPNG' />
+		<ComponentRef Id='cmp_fighter_1PNG' />
+		<ComponentRef Id='cmp_fighter_2PNG' />
+		
+		<ComponentRef Id="removeDocumentationDir" />
+
+		<ComponentRef Id='cmp_beepcomp_users_guideHTML' />
+		<ComponentRef Id='cmp_beepcomp_screen_explainPNG' />
+		<ComponentRef Id='cmp_beepcomp_volume_envelopePNG' />
+
+		<ComponentRef Id="removeUserDataDir" />
+		
+		<ComponentRef Id='cmp_xanaduTXT' />
+		<ComponentRef Id='cmp_some_funky_tuneTXT' />
+		<ComponentRef Id='cmp_romanciaTXT' />
+		<ComponentRef Id='cmp_ys1_field_musicTXT' />
+		<ComponentRef Id='cmp_ys1_town_musicTXT' />
+		<ComponentRef Id='cmp_ys2_palace_of_salmonTXT' />
+		<ComponentRef Id='cmp_ys2_to_make_the_end_of_battleTXT' />
+		<ComponentRef Id='cmp_astro_wars_1TXT' />
+		<ComponentRef Id='cmp_pure_psg_toneTXT' />
+		<ComponentRef Id='cmp_bach_prelude_c_minTXT' />
+		<ComponentRef Id='cmp_astro_effectTXT' />
+		<ComponentRef Id='cmp__tutorial_repeatsTXT' />
+		<ComponentRef Id='cmp__tutorial_drumsTXT' />
+		<ComponentRef Id='cmp__tutorial_drum_shapingTXT' />	
+		<ComponentRef Id='cmp__tutorial_basic_1TXT' />
+		<ComponentRef Id='cmp__tutorial_delayTXT' />
+		<ComponentRef Id='cmp__helpful_tipsTXT' />
+		
+		<ComponentRef Id="UninstallShortcutMenu" />
+		
+		<ComponentRef Id='ProgramMenuDir' />
+
+		<ComponentRef Id="removeConfigDir" />		
+		<ComponentRef Id="cmp_beepcompCONFIG" />		
+		
+    </Feature>
+	
+	<UIRef Id="WixUI_Minimal" />
+	<Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
+	
+	<Icon Id="beepcomp_24.ico" SourceFile="beepcomp_24.ico" />
+	<Icon Id="beepcomp_48.ico" SourceFile="beepcomp_48.ico" />
+	<Icon Id="documentation_24.ico" SourceFile="documentation_24.ico" />
+	<Property Id="ARPPRODUCTICON" Value="beepcomp_48.ico" />
+	
+	<WixVariable Id="WixUILicenseRtf" Value="license.rtf" />
+	<WixVariable Id="WixUIDialogBmp" Value="dialog.bmp" />
+	<WixVariable Id="WixUIBannerBmp" Value="banner.bmp" />
+
+	</Product>
+</Wix>

@@ -1,0 +1,93 @@
+/////////////////////////////////////////////////
+//                                             //
+//   "Song of Romancia" - from RPG "Romancia"  //
+//                                     (1986)  //
+//                                             //
+//                      Music by Takahito Abe  //
+//        From Album "Sound Fantasy Romancia"  //
+//               (c) Nihon Falcom Corporation  //
+//                                             //
+/////////////////////////////////////////////////
+
+// Global ///////////////////////////////////////
+
+@G
+
+MASTERVOLUME=70
+TEMPO=104
+DELAYTIME=577
+V1=8 V2=8 V3=5 VD=0
+
+// Channel 1 ////////////////////////////////////
+
+@1
+
+LFO=ON
+L16O6
+
+E-E-:C~<E-A->CDD:<B-~DFB-
+>C<B-A-G~F~E-D:::B-~~~
+
+G:G:B-G:>C~C<B-:G:E-~CE-:E-~CE-FGF:F~~~~
+G:G:B-G:>C~C<B-:G:E-~CE-:E-~CE-GFE-:E-~~~~
+G:G:B-G:>C~C<B-:G:E-~CE-:E-~CE-FGF:F~~~~
+G~E->E-~C~<B-:>C~<B-E-~F~F#GB-B-B-GE-GFE-:E-~~~:
+
+>::E-D~E-~CD~~~<B-~~~
+:>C<B>C~E-DC<AB->E-<G~~~~
+FEFG:A-:B->C~~~E-~~~
+D~~~C~~~<B-~~~A-~~~
+
+G:G:B-G:>C~C<B-:G:E-~CE-:E-~CE-FGF:F~~~~
+G:G:B-G:>C~C<B-:G:E-~CE-:E-~CE-GFE-:E-~~~~
+G:G:B-G:>C~C<B-:G:E-~CE-:E-~CE-FGF:F~~~~
+G~E->E-~C~<B-:>C~<B-E-~F~F#GB-B-B-GE-GFE-:E-~~~:
+
+>::E-D~E-~CD~~~<B-~~~
+:>C<B>C~E-DC<AB->E-<G~~~~
+FEFG:A-:B->C~~~E-~~~
+D~~~C~~~<B-~~~A-~~~
+
+G~~~~~~~::::
+
+
+// Channel 2 ////////////////////////////////////
+
+@2
+
+L16O4
+
+CC:<A-~~~~B-B-:G~~~~
+A-GFE-~<A-~AB-:::>B-~~~
+
+E-:E-:GE-:A-~A-G:E-:<G~
+A-A-:A~AAAB-B-:B-~B->CD
+E-:E-:GE-:A-~A-G:E-:<G~
+A-A-:A-~A-A-A-B-B-:>E-~<B->CD
+
+E-E-E-E-GE-:A-A-A-G<B->E-E-E-<G
+A-A-A-A~AAAB-B-:B-~B->CD
+E-E-:E- E-E-:E- <A-A-:A- A-A-:A-
+B-B-:B- B-B-:B- B-B-:>E-~~~:
+
+>C~~<GCE-G>C<B-~~G<B->DGB-
+A-E-<A->C~<A->CDE-~~~~B-GE-
+<A->A-A-<A-A->A-A-<A-A>AA<AA>AA<A
+B->B->B-<B-<B->B->B-<B-<B->B->B-<B-<B->B->B-<B-
+
+E-:E-:GE-:A-~A-G:E-:<G~
+A-A-:A~AAAB-B-:B-~B->CD
+E-:E-:GE-:A-~A-G:E-:<G~
+A-A-:A-~A-A-A-B-B-:>E-~<B->CD
+
+E-E-E-E-GE-:A-A-A-G:E-:<GG
+A-A-:A~AAAB-B-:B-~B->CD
+E-E-:E- E-E-:E- A-A-:A- A-A-:A-
+<B-B-:B-B-B-:B-B-B-:>E-~~~:
+
+>C~~<GCE-G>C<B-~~G<B->DGB-
+A-E-<A->C~<A->CDE-~~~~B-GE-
+<A->A-A-<A-A->A-A-<A-A>AA<AA>AA<A
+B->B->B-<B-<B->B->B-<B-<B->B->B-<B-<B->B->B-<B-
+
+E-~~~~~~~::::

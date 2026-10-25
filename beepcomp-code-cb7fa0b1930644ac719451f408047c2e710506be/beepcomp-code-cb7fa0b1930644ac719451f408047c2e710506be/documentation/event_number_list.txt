@@ -1,0 +1,69 @@
+Event Type number List
+
+	0	Specify volume	(=param, 0 to 10)
+	1	Increment volume
+	2	Decrement volume
+	
+	10	WAVEFORM=		(=param, 0 to 99)
+	11	WAVEFLIP
+	
+	20	ATTACKTIME=
+	21	PEAKTIME=
+	22	DECAYTIME=
+	23	RELEASETIME=
+	24	PEAKLEVEL=
+	25	SUSTAINLEVEL=
+	
+	30	LFO=ON/OFF		(=param, 0:OFF, 1:ON)
+	31	LFORANGE=
+	32	LFOSPEED=
+	33	LFOWAIT=
+	
+	40	ASTRO=			(=param)
+	41	ASTRO=OFF
+	
+	50	FALL
+	51	FALLSPEED=
+	52	FALLWAIT=
+	
+	60	RISE
+	61	RISESPEED=
+	62	RISERANGE=
+	
+	70  BEEFUP=			(=param, 0 to 100)
+	
+	80  RINGMOD=		(=param, 0 to 9 for channel #, 0: OFF)
+	81	RINGMOD=OFF
+	
+	90	LOWPASS=		(=param, 100 to 9999)
+	91	LOWPASS=OFF
+	92	LOWPASSQ=		(=param, 30 to 500)
+	93	LOWTRIM=		(=param, 0 to 100)
+	94	LOWTRIMQ=
+
+	500 	RESETDRUMS
+	
+	510		KICKPITCH=		(=param, scale of 0 to 100, default is 50%)
+	511		SNAREPITCH=		(=param, scale of 0 to 100, default is 50%)
+	512		HIHATPITCH=		(=param, scale of 0 to 100, default is 50%)
+	
+	520		BEEFUP=			(=param, 0 to 100) // for drums
+	
+	530		WHITENOISE
+	531		PINKNOISE
+	532		KICKNOISE=		(=WHITE sets whitenoise, =PINK sets pinknoise)
+	533		SNARENOISE=		(=WHITE sets whitenoise, =PINK sets pinknoise)
+	534		HIHATNOISE=		(=WHITE sets whitenoise, =PINK sets pinknoise)
+	
+	540		KICKLENGTH=		(=param, 0 to 400 in milliseconds, default=50)
+	541		SNARELENGTH=	(=param, 0 to 1000 in milliseconds, default=140)	
+	542		HIHATLENGTH=	(=param, 0 to 1000 in milliseconds, default=20)
+	
+	550		SQUARELEVEL=	(=param, 0 to 100, default=100)
+	551		NOISELEVEL=		(=param, 0 to 100, default=100)
+	
+	1000	DEFAULTTONE
+	1001	PRESET=BELL
+	1002	PRESET=POPPY
+	1003	PRESET=POPPYVIB
+	1004	PRESET=BELL

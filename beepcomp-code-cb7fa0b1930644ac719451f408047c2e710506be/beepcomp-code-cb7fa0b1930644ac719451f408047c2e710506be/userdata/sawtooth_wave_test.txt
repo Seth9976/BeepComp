@@ -1,0 +1,11 @@
+// sawtooth wave test... :)
+
+@1
+
+DEFAULTTONE
+WAVEFORM=2 // you can try different value :)
+           // 2 is sawtooth wave... 
+
+F~~:A-~:F:FB-:F:E-:
+F~~:>C~:<F:F>D-:C:<A-:
+F:>C:F:<FE-:E-C:G:F~ ~~~~ ~~~~ :::: ::::

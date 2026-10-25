@@ -1,0 +1,969 @@
+/////////////////////////////////////////////////
+//
+//  Ys II: Ancient Ys Vanished (Falcom, 1988)
+//
+//  "To Make The End Of Battle"
+//
+//                         Composer: Yuzo Koshiro
+//                         Album: Music From YsII
+//                  (c) Nihon Falcom Corpoaration
+//
+//                  (w/ Sandwich man's twists :))
+
+////////////////////////////////// global section
+
+@G
+
+LOOP=OFF
+TEMPO=120
+MASTERVOLUME=70
+DELAYTIME=500
+DELAYLEVEL=25
+
+V1=9 V2=6 V3=6 V4=7 V5=9 V6=6 V7=6 VD=10
+
+/////////////////////////////////// ch 1 - melody
+
+@1
+
+ // intro //
+
+WAVEFORM=2
+ATTACKTIME=0
+PEAKTIME=70
+PEAKLEVEL=90
+DECAYTIME=40
+SUSTAINLEVEL=70
+RELEASETIME=40
+FALLSPEED=800
+FALLWAIT=0
+RISERANGE=100
+RISESPEED=800
+LFO=ON
+LFORANGE=20
+LFOWAIT=250
+LFOSPEED=5
+
+O4 L16
+::::
+D#EGA~,<AAA >C#<A>D<A>E<A>D<A
+
+WAVEFORM=1
+ATTACKTIME=0
+PEAKLEVEL=70
+PEAKTIME=30
+DECAYTIME=15
+SUSTAINLEVEL=25
+
+L32 AB-AB-AB-AB- > AB-AB-AB-AB-
+L16 > EFG#F EFG#A
+
+WAVEFORM=2
+ATTACKTIME=0
+PEAKTIME=70
+PEAKLEVEL=90
+DECAYTIME=40
+SUSTAINLEVEL=70
+
+O4
+C#<AB-G AFGE B-GAFGEFD
+C#DEF GAB->C# EC#<B->F C#<B-B-A
+
+LFOSPEED=8
+LFOWAIT=0
+
+LFORANGE=120 G~~~~~ 
+LFORANGE=0 AB->
+LFORANGE=120 C#~~~~~
+
+LFORANGE=20
+LFOWAIT=250
+LFOSPEED=5
+
+EF GFEFGAB->C# E~E~,F~G~
+
+ // chorus //
+
+O5
+FECD~~~~ ~~~,~ <A>CDC FECD ~~~~ ~~~,~ <AGFE
+F~~D~~F~ G~~,E~~G~ A~~F~~D~ E~~G~~B-~
+A~~~ ~~~: >DEFG AGFE G~~E~~,C~ <G~~>C~~E~
+FD<AFDA>DF EC<GECG>CE<
+DFA>C# DFA>C#
+
+FALLSPEED=3600
+LFORANGE=90
+LFOWAIT=150
+LFOSPEED=8
+D~~~~~,~~ <
+
+ // chorus - repeat //
+
+WAVEFORM=5
+LFORANGE=15
+LFOWAIT=250
+LFOSPEED=5
+PEAKLEVEL=100
+BEEFUP=14
+FALLSPEED=600
+
+FECD~~~~ ~~~,~ <A>CDC FECD ~~~~ ~~~,~ <AGFE
+F~~D~~F~ G~~,E~~G~ A~~F~~D~ E~~G~~B-~
+A~~~ ~~~: >DEFG AGFE G~~E~~,C~ <G~~>C~~E~
+FD<AFDA>DF EC<GECG>CE
+
+BEEFUP=0
+PEAKLEVEL=100
+WAVEFORM=2
+
+O3
+E-~~~ G~~~ B-~~~ >E-~~~
+
+ // bridge //
+
+A~~~ DFGA ~~G~ FG~>D ~~<A~ GF~E
+~~F~ ~G~~
+
+WAVEFORM=5
+BEEFUP=5
+
+O5
+A~~~ DFGA ~~G~ FG~>D ~~D~ E~D~
+D~~~ C#~~~
+
+ // vamp //
+
+O5
+{4:::: :::: :::: ::::}
+
+ // intro - reprise //
+
+WAVEFORM=2
+ATTACKTIME=0
+PEAKTIME=70
+PEAKLEVEL=90
+DECAYTIME=40
+SUSTAINLEVEL=70
+RELEASETIME=40
+FALLSPEED=800
+FALLWAIT=0
+LFO=ON
+LFORANGE=20
+LFOWAIT=250
+LFOSPEED=5
+BEEFUP=0
+
+O4
+D#EGA~,<AAA >C#<A>D<A>E<A>D<A
+
+WAVEFORM=1
+ATTACKTIME=0
+PEAKLEVEL=70
+PEAKTIME=30
+DECAYTIME=15
+SUSTAINLEVEL=25
+
+L32 AB-AB-AB-AB- > AB-AB-AB-AB-
+L16 > EFG#F EFG#A
+
+WAVEFORM=2
+ATTACKTIME=0
+PEAKTIME=70
+PEAKLEVEL=100
+DECAYTIME=40
+SUSTAINLEVEL=70
+
+O4
+L8 [AB->C#][DC#<B-][AB->C#][DC#<B-]
+[A>DC#]<[B-A>D] [C#<B-A]>[DC#<B-]
+[A>EC#]<[B-A>F] [C#<B-A]>[GC#<B-]
+[A>AC#]<[B-AG] A [B->C#D][EFG][AB->C#]
+LFORANGE=60 LFOSPEED=8 LFOWAIT=50
+L24 *E~~~~~,
+LFORANGE=20 LFOSPEED=5 LFOWAIT=250
+L4[DEDEDEDE][C#EC#EC#EC#EC#]<
+[B->C#<B->C#<B->C#<B->C#<B->C#]<L16[B-AB-]A~~
+~,[GA]GF[EF]DC#<A>
+
+ // chorus //
+
+O5
+FALLWAIT=0
+FECD~~~~ ~~~,~ <A>CDC FECD ~~~~ ~~~,~ <AGFE
+F~~D~~F~ G~~,E~~G~ A~~F~~D~ E~~G~~B-~
+A~~~ <[8A>C#D][8FA>C#]
+DEFG AGFE G~~E~~,C~ <G~~>C~~E~
+FD<AFDA>DF EC<GECG>CE<
+DFA>C# DFA>C#
+
+FALLSPEED=3600
+LFORANGE=90
+LFOWAIT=150
+LFOSPEED=8
+D~~~~~,~~<
+
+ // chorus - repeat //
+
+WAVEFORM=5
+LFORANGE=20
+LFOWAIT=250
+LFOSPEED=5
+PEAKLEVEL=100
+BEEFUP=14
+FALLSPEED=600
+
+FECD ~~, [8AB-A][8GAG][8FGF][8EFE][8DED] 
+FECD ~~, [8AB-A][8GAG][8FGF][8EDC]<[8B-AG]
+F~~D~~F~ G~~,E~~G~ A~~F~~D~ E~~G~~B-~
+A~~~ <[8B->C#D][8EFGAB->C#]
+DEFG AGFE G~~E~~,C~ <G~~>C~~E~
+FD<AFDA>DF EC<GECG>CE
+
+BEEFUP=0
+PEAKLEVEL=100
+WAVEFORM=2
+
+O3
+E-~~~ G~~~ B-~~~ >E-~~~
+
+O5
+
+RISERANGE=100
+RISESPEED=800
+LFORANGE=30
+
+*D~~~ ~~~~ ~,~ ::::C<A [8A-G~]FD~~~,~ 
+:<[A>C]DF CDFG
+*DFGA FGA>C <GA>CD <A>CDF *E[FE]CD~~,~:
+O6
+L8 [*D~~~~~~~~:] [8DC<A] > [*D~~~~~~~~:][8DC<A]
+>[*D~~~~~~~~:] [8DC<A] > [*D~~~~~~~~:] [8DC<A] 
+>[*D~~~~~~~~:] L8 [DC<A] >[C<AG] [AGF] 
+[GFD][FDC][DC<A]>[C<AG][AGF][GFD] L24 C~~~~,~
+L16 :<[GA]>CDFDFG*A~>CD<[A-G]FDCFD[F~:]FD<A>CD~~~,~
+L8 [CDF][GA>C]
+
+FALLSPEED=6400
+
+L16 D::D ::DD ~,::: ::::
+
+///////////////////////////////// ch 2 - chordal
+
+@2
+
+ // intro //
+
+WAVEFORM=1
+ATTACKTIME=4
+PEAKLEVEL=80
+PEAKTIME=40
+DECAYTIME=20
+SUSTAINLEVEL=35
+FALLSPEED=1000
+FALLWAIT=0
+
+L16 O5
+::::
+E~~~~~~~ G~~~~~~~
+O7 _ C#<B-GE ^ C#<B-GE
+C#DFDC#DEF<
+
+B-~~~~~,~~ >E~~~~~,~~
+G~~~~~,F~ E~~~~~,~~<
+B-~~~~~,~~ >E~~~~~,~~
+G~~~~~,~~ C#~C#~D~E~
+
+ // chorus //
+
+L16 O5
+DC<GA~~~~ >A~G~F~E~
+DC<GA~~~~ >A~G~F~E~
+D~~<A~~>D~ E~~,C~~E~
+F~~D~~<A~ >C#~~E~~G~<
+F~~~~~~~ A~~~>D~~~
+E~~~~~~~ C~~~~~~~
+F~~~~~~~ E~~~~~~~
+D~~~~~~~ ~~C#~<B~>C#~
+
+ // chorus - repeat //
+
+DC<GA~~~~ >A~G~F~E~
+DC<GA~~~~ >A~G~F~E~
+D~~<A~~>D~ E~~,C~~E~
+F~~D~~<A~ >C#~~E~~G~<
+F~~~~~~~ A~~~>D~~~
+E~~~~~~~ C~~~~~~~
+F~~~~~~~ E~~~~~~~
+
+ATTACKTIME=800
+DECAYTIME=1000
+SUSTAINLEVEL=0
+^ B-~~~~~~~ ~~~~~~~~ _
+
+// bridge //
+
+ATTACKTIME=4
+PEAKTIME=40
+DECAYTIME=20
+SUSTAINLEVEL=35
+
+O4
+F~~~~~~~ F~~~~~~~
+B-~~~~~~~ A~~~~~~~>
+F~~~~~~~ F~~~~~~~
+B-~~~~~~~ A~~~~~~~<
+
+ // vamp //
+
+ATTACKTIME=0
+PEAKLEVEL=60
+PEAKTIME=30
+DECAYTIME=15
+SUSTAINLEVEL=15
+
+O4
+{ A>DF<A>DF<A>DF<A>DF<B->E-GE-<
+A>DF<A>DF<A>DF<A>DF<GG>CE< }
+
+ // intro - reprise //
+
+WAVEFORM=1
+ATTACKTIME=4
+PEAKLEVEL=80
+PEAKTIME=40
+DECAYTIME=20
+SUSTAINLEVEL=35
+FALLSPEED=1000
+FALLWAIT=0
+
+L16 O5
+E~~~~~~~ G~~~~~~~
+O7 _ C#<B-GE ^ C#<B-GE
+C#DFDC#DEF<
+
+B-~~~~~,~~ >E~~~~~,~~
+G~~~~~,F~ E~~~~~,~~<
+B-~~~~~,~~ >E~~~~~,~~
+G~~~~~,~~ C#~C#~D~E~
+
+ // chorus //
+
+L16 O5
+DC<GA~~~~ >A~G~F~E~
+DC<GA~~~~ >A~G~F~E~
+D~~<A~~>D~ E~~,C~~E~
+F~~D~~<A~ >C#~~E~~G~<
+F~~~~~~~ A~~~>D~~~
+E~~~~~~~ C~~~~~~~
+F~~~~~~~ E~~~~~~~
+D~~~~~~~ ~~C#~<B~>C#~
+
+ // chorus - repeat //
+
+DC<GA~~~~ A~G~F~E~>
+DC<GA~~~~ A~G~F~E~>
+D~~<A~~>D~ E~~,C~~E~
+F~~D~~<A~ >C#~~E~~G~<
+F~~~~~~~ A~~~>D~~~
+E~~~~~~~ C~~~~~~~
+F~~~~~~~ E~~~~~~~
+
+ATTACKTIME=800
+DECAYTIME=1000
+SUSTAINLEVEL=0
+^ B-~~~~~~~ ~~~~~~~~ _
+
+ // vamp //
+
+ATTACKTIME=0
+PEAKLEVEL=60
+PEAKTIME=30
+DECAYTIME=15
+SUSTAINLEVEL=15
+
+O4
+{4 A>DF<A>DF<A>DF<A>DF<B->E-GE-<
+A>DF<A>DF<A>DF<A>DF<GG>CE<}
+
+PEAKLEVEL=80
+A::A ::AA ~,::: ::::
+
+////////////////////////////////// ch 3 - chordal
+
+@3
+
+ // intro //
+
+WAVEFORM=1
+ATTACKTIME=4
+PEAKLEVEL=80
+PEAKTIME=40
+DECAYTIME=20
+SUSTAINLEVEL=35
+FALLSPEED=1000
+FALLWAIT=0
+
+L16 O5
+::::
+C#~~~~~~~ E~~~~~~~
+O6 _B-GEC# ^ <B-GEC#<
+AB->C#<B-AB->C#D<
+
+G~~~~~,~~ B-~~~~~,~~>
+E~~~~~,D~ C#~~~~~,~~<
+G~~~~~,~~ B-~~~~~,~~>
+E~~~~~,~~ <A~A~B~>C#~
+
+ // chorus //
+
+O4
+AGEF~~~~ >F~E~D~C~<
+AGEF~~~~ >F~E~D~C~<
+A~~F~~A~ >C~~,<G~~>C~
+D~~<A~~F~ A~~>C#~~E~<
+D~~~~~~~ F~~~A~~~>
+C~~~~~~~ <G~~~~~~~>
+D~~~~~~~ C~~~~~~~<
+A~~~~~~~ ~~A~G~A~
+
+ // chorus -repeat //
+
+AGEF~~~~ >F~E~D~C~<
+AGEF~~~~ >F~E~D~C~<
+A~~F~~A~ >C~~,<G~~>C~
+D~~<A~~F~ A~~>C#~~E~<
+D~~~~~~~ F~~~A~~~>
+C~~~~~~~ <G~~~~~~~>
+D~~~~~~~ C~~~~~~~
+
+ATTACKTIME=800
+DECAYTIME=1000
+SUSTAINLEVEL=0
+^ G~~~~~~~ ~~~~~~~~ _
+
+ // bridge //
+
+ATTACKTIME=4
+PEAKTIME=40
+DECAYTIME=20
+SUSTAINLEVEL=35
+
+O4
+D~~~~~~~ C~~~~~~~
+F~~~~~~~ E~~~~~~~>
+D~~~~~~~ C~~~~~~~
+F~~~~~~~ E~~~~~~~<
+
+ // vamp //
+
+ATTACKTIME=0
+PEAKLEVEL=60
+PEAKTIME=30
+DECAYTIME=15
+SUSTAINLEVEL=15
+
+O4
+{ FA>D<FA>D<FA>D<FA>D<GB->E-<B-
+FA>D<FA>D<FA>D<FA>D<EEG>C< }
+
+ // intro - reprise //
+
+WAVEFORM=1
+ATTACKTIME=4
+PEAKLEVEL=80
+PEAKTIME=40
+DECAYTIME=20
+SUSTAINLEVEL=35
+FALLSPEED=1000
+FALLWAIT=0
+
+L16 O5
+C#~~~~~~~ E~~~~~~~
+O6 _B-GEC# ^ <B-GEC#<
+AB->C#<B-AB->C#D<
+
+G~~~~~,~~ B-~~~~~,~~>
+E~~~~~,D~ C#~~~~~,~~<
+G~~~~~,~~ B-~~~~~,~~>
+E~~~~~,~~ <A~A~B~>C#~
+
+ // chorus //
+
+O4
+AGEF~~~~ >F~E~D~C~<
+AGEF~~~~ >F~E~D~C~<
+A~~F~~A~ >C~~,<G~~>C~
+D~~<A~~F~ A~~>C#~~E~<
+D~~~~~~~ F~~~A~~~>
+C~~~~~~~ <G~~~~~~~>
+D~~~~~~~ C~~~~~~~<
+A~~~~~~~ ~~A~G~A~
+
+ // chorus -repeat //
+
+AGEF~~~~ F~E~D~C~
+AGEF~~~~ F~E~D~C~
+A~~F~~A~ >C~~,<G~~>C~
+D~~<A~~F~ A~~>C#~~E~<
+D~~~~~~~ F~~~A~~~>
+C~~~~~~~ <G~~~~~~~>
+D~~~~~~~ C~~~~~~~
+
+ATTACKTIME=800
+DECAYTIME=1000
+SUSTAINLEVEL=0
+^ G~~~~~~~ ~~~~~~~~ _
+
+ // vamp //
+
+ATTACKTIME=0
+PEAKLEVEL=60
+PEAKTIME=30
+DECAYTIME=15
+SUSTAINLEVEL=15
+
+O4
+{4 FA>D<FA>D<FA>D<FA>D<GB->E-<B-
+FA>D<FA>D<FA>D<FA>D<EEG>C< }
+
+PEAKLEVEL=80
+F::F ::FF ~,::: ::::
+
+////////////////////////////////// ch 4 - chordal
+
+@4
+
+L16 ::::
+
+L1 :: :: ::
+:: :: :: ::
+:: :: :: ::
+:: ::
+
+ // vamp //
+
+WAVEFORM=1
+ATTACKTIME=0
+PEAKLEVEL=70
+PEAKTIME=30
+DECAYTIME=15
+SUSTAINLEVEL=15
+BEEFUP=0
+
+O5 L16
+{2 DFAD FADF ADFA E-GB-G
+DFAD FADF ADFA CCEG }
+
+L1 :: :: ::
+:: :: :: ::
+:: :: :: ::
+
+// vamp //
+
+O5 L16
+
+{4 DFAD FADF ADFA E-GB-G
+DFAD FADF ADFA CCEG }
+
+D::D ::DD ~,::: ::::
+
+///////////////////////////////////// ch 5 - bass
+
+@5
+
+WAVEFORM=1
+ATTACKTIME=0
+PEAKTIME=60
+PEAKLEVEL=90
+DECAYTIME=30
+SUSTAINLEVEL=30
+
+ // intro //
+
+O2 L16
+::::
+AAAA >C#<AAA >E<A>F<A>G<A>F<A
+>E<A>F<A>E<A>D<A >C#<AB-GAB->C#<B-
+A~~,~ ::>A~, A<A~~, AA>C#D<
+A~~,~ ::>A~, A<A~~, AA>C#D<
+A~~,~ ::>A~, A<A~~, AA>C#D<
+A~~,~ ::>A~, <AA>A<A <BB>C#C#
+
+ // chorus //
+
+O2 L16
+{DDDD DDDD}
+{CCCC CCCC}<
+B-B->DFB-FDF
+CCEG>C<GEG
+DDFA>D<AFA<
+A>AGE<AAAA>
+
+{DDDD DDDD}
+{CCCC CCCC}<
+B-B->DFB-FDF
+CCEG>C<GEG
+DDFA>D<AFA<
+A>AGE<AAAA>
+
+ // chorus - repeat //
+
+{DDDD DDDD}
+{CCCC CCCC}<
+B-B->D FB-FDF
+CCEG> C<GEG
+DDFA> D<AFA<
+A>AGE< AAAA>
+
+{DDDD DDDD}
+{CCCC CCCC}<
+B-B->DF B-FDF
+CCEG> C<GEG
+
+E-E-B-E- GE-AE-
+B-E->E-<E->G<E->B-<E-
+
+ // bridge //
+
+O2
+DD>D<D GA>CD<
+FF>F<F FF>F<F
+B-B->B-<B- B-B->B-<B-
+AA>A<A >G<A>A<A
+
+DD>D<D GA>CD<
+FF>F<F FF>F<F
+B-B->B-<B- B-B->B-<B-
+AA>A<A >AEC#<A
+
+ // vamp //
+
+{2 D::D ::>CD< :DDD E-E-GB-
+D::D ::>CD< :DDD CCGC }
+
+ // intro - reprise //
+
+O2 L16
+AAAA >C#<AAA >E<A>F<A>G<A>F<A
+>E<A>F<A>E<A>D<A >C#<AB-GAB->C#<B-
+A~~,~ ::>A~, A<A~~, AA>C#D<
+A~~,~ ::>A~, A<A~~, AA>C#D<
+A~~,~ ::>A~, A<A~~, AA>C#D<
+A~~,~ ::>A~, <AA>A<A <BB>C#C#
+
+ // chorus //
+
+O2 L16
+{DDDD DDDD}
+{CCCC CCCC}<
+B-B->DFB-FDF
+CCEG>C<GEG
+DDFA>D<AFA<
+A>AGE<AAAA>
+
+{DDDD DDDD}
+{CCCC CCCC}<
+B-B->DFB-FDF
+CCEG>C<GEG
+DDFA>D<AFA<
+A>AGE<AAAA>
+
+ // chorus - repeat //
+
+{DDDD DDDD}
+{CCCC CCCC}<
+B-B->D FB-FDF
+CCEG> C<GEG
+DDFA> D<AFA<
+A>AGE< AAAA>
+
+{DDDD DDDD}
+{CCCC CCCC}<
+B-B->DF B-FDF
+CCEG> C<GEG
+
+E-E-B-E- GE-AE-
+B-E->E-<E->G<E->B-<E-
+
+ // vamp //
+
+{4 D::D ::>CD< :DDD E-E-GB-
+D::D ::>CD< :DDD CCGC }
+
+D::D ::DD ~,::: ::::
+
+//////////////////////////// ch 6 - rhythm guitar
+
+@6
+
+WAVEFORM=2
+ATTACKTIME=0
+PEAKTIME=60
+PEAKLEVEL=90
+DECAYTIME=40
+SUSTAINLEVEL=10
+
+ // intro //
+
+L16 O2
+::::
+
+{5 :A>A: <A>A<:: :A>A: <A>A<::}
+:A>A: <A>A<:: AAAAGGAA
+
+ // chorus //
+
+O3 L16
+D:>D<: D>D<:D >D:<D>D< :D>D<:
+C:>C<: C>C<:C >C:<C>C< :C>C<:<
+
+:B->B-<: B->B-:: :C>C<: C>C<::
+:D>D<: D>D<:: <:A>A<: A>A<::
+
+O3
+D:>D<: D>D<:D >D:<D>D< :D>D<:
+C:>C<: C>C<:C >C:<C>C< :C>C<:<
+
+:B->B-<: B->B-:: :C>C<: C>C<::
+:D>D<: D>D<:D >D:<D>D< :D>D<:
+
+ // chorus - repeat //
+
+O3
+D:>D<: D>D<:D >D:<D>D< :D>D<:
+C:>C<: C>C<:C >C:<C>C< :C>C<:<
+
+:B->B-<: B->B-:: :C>C<: C>C<::
+:D>D<: D>D<:: <:A>A<: A>A<::
+
+O3
+D:>D<: D>D<:D >D:<D>D< :D>D<:
+C:>C<: C>C<:C >C:<C>C< :C>C<:<
+
+:B->B-<: B->B-:: :C>C<: C>C<::
+:E->E-<: E->E-<:E- >E-:<E->E-< :E->E-<:
+
+ // bridge //
+
+O3
+:D>D<: D>D<:: <:F>F<: F>F<::
+:B->B-<: B->B-<:: :A>A<: A>A<::>
+:D>D<: D>D<:: <:F>F<: F>F<::
+:B->B-<: B->B-<:: :A>A<: A>A<::>
+
+ // vamp //
+
+O4
+{2 D::D ::DD :DD: E-:E-:
+D::D ::DD :DD: C:C: }
+
+ // intro - reprise //
+
+L16 O2
+{5 :A>A: <A>A<:: :A>A: <A>A<::}
+:A>A: <A>A<:: AAAAGGAA
+
+ // chorus //
+
+O3 L16
+D:>D<: D>D<:D >D:<D>D< :D>D<:
+C:>C<: C>C<:C >C:<C>C< :C>C<:<
+
+:B->B-<: B->B-:: :C>C<: C>C<::
+:D>D<: D>D<:: <:A>A<: A>A<::
+
+O3
+D:>D<: D>D<:D >D:<D>D< :D>D<:
+C:>C<: C>C<:C >C:<C>C< :C>C<:<
+
+:B->B-<: B->B-:: :C>C<: C>C<::
+:D>D<: D>D<:D >D:<D>D< :D>D<:
+
+ // chorus - repeat //
+
+O3
+D:>D<: D>D<:D >D:<D>D< :D>D<:
+C:>C<: C>C<:C >C:<C>C< :C>C<:<
+
+:B->B-<: B->B-:: :C>C<: C>C<::
+:D>D<: D>D<:: <:A>A<: A>A<::
+
+O3
+D:>D<: D>D<:D >D:<D>D< :D>D<:
+C:>C<: C>C<:C >C:<C>C< :C>C<:<
+
+:B->B-<: B->B-:: :C>C<: C>C<::
+:E->E-<: E->E-<:E- >E-:<E->E-< :E->E-<:
+
+ // vamp //
+
+O4
+{4 D::D ::DD :DD: E-:E-:
+D::D ::DD :DD: C:C: }
+
+D::D ::DD ~,::: ::::
+
+//////////////////////////// ch 7 - rhythm guitar
+
+@7
+
+WAVEFORM=2
+ATTACKTIME=0
+PEAKTIME=60
+PEAKLEVEL=90
+DECAYTIME=40
+SUSTAINLEVEL=10
+
+ // intro //
+
+L16 O3
+::::
+
+{5 ::E: :E:: ::E: :E::}
+::E: :E:: EEEE DDEE
+
+ // chorus //
+
+O3 L16
+::A: :A:: A::A ::A:
+::G: :G:: G::G ::G:
+::F: :F:: ::G: :G::
+::A: :A:: ::E: :E::
+
+::A: :A:: A::A ::A:
+::G: :G:: G::G ::G:
+::F: :F:: ::G: :G::
+::A: :A:: A::A ::A:
+
+ // chorus - repeat //
+
+::A: :A:: A::A ::A:
+::G: :G:: G::G ::G:
+::F: :F:: ::G: :G::
+::A: :A:: ::E: :E::
+
+::A: :A:: A::A ::A:
+::G: :G:: G::G ::G:
+::F: :F:: ::G: :G::
+::B-: :B-:: B-::B- ::B-:
+
+ // bridge //
+
+::A: :A:: ::C: :C::
+::F: :F:: ::E: :E::
+::A: :A:: ::C: :C::
+::F: :F:: ::E: :E::
+
+ // vamp //
+
+O3
+{ A::A ::AA :AA: B-:B-:
+A::A ::AA :AA: G:G: }
+
+
+ // intro - reprise //
+
+L16 O3
+{5 ::E: :E:: ::E: :E::}
+::E: :E:: EEEE DDEE
+
+ // chorus //
+
+O3 L16
+::A: :A:: A::A ::A:
+::G: :G:: G::G ::G:
+::F: :F:: ::G: :G::
+::A: :A:: ::E: :E::
+
+::A: :A:: A::A ::A:
+::G: :G:: G::G ::G:
+::F: :F:: ::G: :G::
+::A: :A:: A::A ::A:
+
+ // chorus - repeat //
+
+::A: :A:: A::A ::A:
+::G: :G:: G::G ::G:
+::F: :F:: ::G: :G::
+::A: :A:: ::E: :E::
+
+::A: :A:: A::A ::A:
+::G: :G:: G::G ::G:
+::F: :F:: ::G: :G::
+::B-: :B-:: B-::B- ::B-:
+
+ // vamp //
+
+O3
+{4 A::A ::AA :AA: B-:B-:
+A::A ::AA :AA: G:G: }
+
+A::A ::AA ~,::: ::::
+
+/////////////////////////////////////////// drums
+
+@D
+
+ // intro //
+
+:KS~
+K:S~ kKS~ K:S~ kKS~ K:S~ kKS~ K:S~ kKS~
+K:KS~sHK K:KS~sHS K:KS~sHK K:KS~s[SS]S
+K:KS~sHK K:KS~sHS K:KS~sHK [SS]KS[SS]KS[SS]S
+
+ // chorus //
+
+K:S~ kKS~ K:S~ kKS~ K:S~ kKS~ K:S~ kKS~
+K:S~ kKS~ K:S~ kKS~ K:S~ kKS~ K:S~ [KK]SSS
+K:S~ kKS~ K:S~ kKS~ K:S~ kKS~ K:S~ kKS~
+K:S~ kKS~ K:S~ kKS~ K:S~ kKS~ KSkK SKsS
+
+ // chorus - repeat //
+
+K:S~ kKS~ K:S~ kKS~ K:S~ kKS~ K:S~ kKS~
+K:S~ kKS~ K:S~ kKS~ K:S~ kKS~ K:S[KK] KSSS
+K:S~ kKS~ K:S~ kKS~ K:S~ kKS~ K:S~ kKS~
+K:S~ kKS~ K:S~ kKS~ K:S~ kKS~ 
+[SS]KK[SS]KK[SS]K
+
+ // bridge //
+
+K:SK :KS~ K:SK hKS~ K:SK :KS~ K:SK hKSS
+K:SK :KS~ K:SK hKS~ K:SK :KS~ K:SK [SS]SKK
+
+ // vamp //
+
+K:hK :hKK :K:h :KSS K:hK :hKK :K:h :[KK]SS
+K:hK :hKK :K:h :KSS K:hK :hKK :K:h [KK]SSS
+
+ // intro - reprise //
+
+K:S~ kKS~ K:S~ kKS~ K:S~ kKS~ K:S~ kKS~
+K:KS~s[HH]K K:KS~s[HH]S
+K:KS~s[HH]K K:KS~s[SS][SS]
+K:KS~s[HH][KK] K:KS~s[HH][KK]
+[SS]KK[SS]KK[SS]KK[SS]KK[SS][SSS][SSS][SSS]
+
+ // chorus //
+
+K:S~ kKS~ K:S~ kKS~ K:S~ kKS~ K:S~ kKS~
+K:S~ kKS~ K:S~ kKS~ K:S~ kKS~ K:S~ [KK]SSS
+K:S~ kKS~ K:S~ kKS~ K:S~ kKS~ K:S~ kKS~
+K:S~ kKS~ K:S~ kKS~ K:S~ kKSK [KK]S[KK]K S[KK]KS
+
+ // chorus - repeat //
+
+K:S~ kKS~ K:S~ kKS~ K:S~ kKS~ K:S~ kKS~
+K:S~ kKS~ K:S~ kKS~ K:S~ kKS~ K:S[KK] KSSS
+K:S~ kKS~ K:S~ kKS~ K:S~ kKS~ K:S~ kKS~
+K:S~ kKS~ K:S~ kKS~ K:S~ kKS~ 
+[SS]KK[SS]KK[SS]K
+
+ // vamp //
+
+K:hK :hKK :K:h :KSS K:hK :hKK :K:h :[KK]SS
+K:hK :hKK :K:h :KSS K:hK :hK[KK] HSKK SKKS
+K:hK :hKK :K:h :KSS K:hK :hKK :K:h :[KK]SS
+K:hK :hKK :K:h :KSS K:hK :hKK K[SS]KK [SS]KKS
+
+K:SK :SKK :::: ::::

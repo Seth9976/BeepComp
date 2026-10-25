@@ -1,0 +1,162 @@
+====================
+Release Notes v0.2.2
+====================
+
+Dear users,
+
+One of BeepComp's newest features is ring modulation. You can create really amazing Sci-Fi effects and unique sound textures with this effect, so I hope you experiment with this feature! See the posts in our forum under the thread "Ring Modulation" where you can find interesting source scripts to try. Another new feature for this version is sound shaping for drums. Now you can change noise types, noise mix level, pitches and lengths for the drums through event commands. I have included a tutorial file to introduce you to these commands.
+I hope you enjoy these new developments - happy beep-making! :)
+
+Sincerely,
+Hiro
+
+New in BeepComp version 0.2.2:
+
+- New ring modulation feature - create wacky sci-fi sound effects and unique percussion sounds
+- REPEAT= in the global section sets the repeat count for playing/exporting
+- WAVEFLIP sets the channel waveform vertically inverted (for balancing when adding multiple pulse waves in the mix)
+- Tune each drum to your liking with KICKPITCH=n and SNAREPITCH=n commands
+- Set the length of each drum with KICKLENGTH=n, SNARELENGTH=n, and HIHATLENGTH=n
+- Now two noise types are avaliable for drums - switch with commands WHITENOISE and PINKNOISE
+- Balance the mix of the pitched element and noise element: SQUARELEVEL=n, NOISELEVEL=n
+- Overdrive effect BEEFUP=n is now available for the drum channel for an extra boost
+- Automatically set the optimum delay time according to the tempo by DELAYTIME=AUTO
+- Minor bug-fix: channels with a large number of control event commands were ignoring the last few of those commands
+- Minor bug-fix: if a looped channel ended with control event commands those commands were getting skipped
+
+====================
+Release Notes v0.2.1
+====================
+
+Dear users,
+
+The funky, nasally sounds of a pulse waveforms were used everywhere in many old console games so these had to be included in BeepComp's sound arsenal! I also added a simple overdrive effect you can use to "beef up" soft waveforms like sine and triangle waves. You will have fun with these new tools!
+I am creating a few forum posts that walk through these new features...
+I hope you enjoy this evolved version of BeepComp.
+Please always feel free to give me feedback, let me know of any bugs, and share songs you make!
+
+Kind regards,
+Hiro
+
+What's new in BeepComp version 0.2.1:
+
+- Introduces pulse waveforms - pulse wave patterns emulate some of the classic sounds of Nintendo's NES
+- New "Beef-Up" effect - mild overdrive effect to fatten up your audio signal
+- Added a button in the file dialog to go to a particular drive, the 'Desktop' folder or the 'Documents' folder
+- Added a help screen in the file dialog to look up key short-cuts
+- CTRL + Z in the file dialog: go back to the previous directory you were in
+- CTRL + R in the file dialog: refresh the current directory you are viewing
+- Now the file dialog will open up to the last saved/loaded directory
+- Added a pop-guard algorithm to prevent from getting clicks from sine and triangle waves
+- Minor rebalancing in the main UI
+
+====================
+Release Notes v0.2.0
+====================
+
+Dear users,
+
+I am excited to introduce the new pitch-bend effects! Pitch falls and rises add so much life to melodies. I included a song example where you can see how these bend effects work - play "ys2_palace_of_solomon.txt" and look into the source text... I hope you enjoy these new tools!
+For this release, I compiled and uploaded a portable version. If you want a version that can run out of your thumb drive, go to Sourceforge release folder and look for a folder named "portable." 
+Thank you for using BeepComp. Your feedback and issue reports are always welcome. Beep on!
+
+Sincerely,
+Hiro
+
+What's new in BeepComp version 0.2.0:
+
+- Pitch-bend effects: Fall and Rise (',' comma for fall, '*' asterisk for rise)
+- Now any music channel command can be written to be effective anywhere within the song
+  (You can change LFO settings or start the Astro effect in the middle of a song, for instance)
+- New tone presets added: POPPY, POPPYVIB, and BELL
+- An uninstaller and documentation shortcuts were added to start menu
+- Improved the installer package size
+- Page Down and Page Up keys to move vertically by one screen height
+- ALT + D in file dialogs will direct you to the 'Desktop' folder
+- Minor bug-fix: short messages were showing at displaced coordinates when the window was scaled
+- Minor bug-fix: made [HOME] key in file dialogs work correctly
+- Minor bug-fix: fixed the buttons that sometimes lingered on
+- Minor rebalancing of the color scheme
+
+
+====================
+Release Notes v0.1.9
+====================
+
+Dear users,
+
+I hope BeepComp is contributing to your creative endeavors! Thank you for using this software. It has gotten a lot more stable than it once was. There are always many new things for me to learn and improve on, but your kind support and feedback keep me going. Enjoy beep-making! :)
+
+Hiro
+
+What's new in BeepComp version 0.1.9
+
+- The userdata folder location has been migrated to inside user's 'Documents' folder
+  (Easier access, plus any users can access directly without going to the mirrored location)
+- now using new typefaces that work better (clearer, hopefully!)
+- With the new font, the screen fits a couple of more lines in the editor area
+- Minor rebalancing of the screen components
+- Minor bug-fix: X-ing out the window was not working properly in file dialogs
+- Minor bug-fix: made the file type switch work properly when the selected item went off-screen
+- A tutorial was added to give you tips on setting a good delay timing
+- Made the license notices more appropriate
+
+====================
+Release Notes v0.1.8
+====================
+
+Dear users,
+
+Exciting news! The Softpedia website's editorial team has given BeepComp a nice 4-star review, and a 100% Free award certification :) I thank you for using BeepComp! Please always let me know about any issues you might find and things I can do to improve the program.
+
+The version 0.1.8 is a maintenance release (addressing the issue with quick-saving was important).
+
+Sincerely,
+Hiro
+
+New in BeepComp version 0.1.8:
+
+- Bug-fix: to prevent the quick-saving function from overwriting the previous save target
+  when the user has started a new file or loaded a file
+- Now you can use multiple ties within tuplet braces []
+- In the previous versions, writing multiple ties in a tuplet group would cause disposition
+- Minor bug-fix: opening a NEW dialog after resizing the window was setting incorrect mouse coordinates
+- Minor bug-fix: starting a song with a rest was causing a small click noise
+- You can now check the version number by clicking the logo
+
+====================
+Release Notes v0.1.7
+====================
+
+Dear users,
+
+Boy, we have many exciting new features here! :)
+I focused on making the program more robust, and I will continue on this path.
+Thank you for using BeepComp.
+I'm grateful for the people who got in touch with me about the bugs, too.
+Hope you enjoy this!
+
+Hiro
+
+-----
+
+New features in BeepComp version 0.1.7:
+
+- A new default demo song! :)
+
+- The user's work now gets automatically saved every 5 minutes
+- If the audio device drops out, it gets re-initialized automatically
+  (automatic check performed every 5 seconds)
+- Now you can specify a set number to repeat a phrase, by {n---}
+- Minor bug fix: empty tuplet braces [] caused crash
+- Minor bug fix: made rests ":" work correctly inside tuplet markings
+- Minor bug fix: a problem with fast-forwarding for drum channel was fixed
+- PRESET=BEEP sets up for a raw PC beep tone
+  (This is great for simulating vintage PC sounds)
+- New feature to select waveforms: WAVEFORM=n can specify for each channel
+  (0..sine, 1..square(default), 2..saw, 3..triangle, 4&5..hybrid sine)
+- DEFAULTTONE sets up for default square tone beep (similar to PRESET=BEEP)
+- A couple of new example source files were added
+- Better pasting: CTRL + V will paste over selection if a selection is present
+
+-----

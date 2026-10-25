@@ -1,0 +1,205 @@
+/////////////////////////////////////////////////
+// - Field Scene Music - from                  //
+//    Ys I: Ancient Ys Vanished (Falcom, 1987) //
+//                   "First Step Towards Wars" //
+//                      Composer: Yuzo Koshiro //
+//                       Album "Music from Ys" //
+//                (c) Nihon Falcom Corporation //
+/////////////////////////////////////////////////
+
+@G
+TEMPO=150
+MASTERVOLUME=70
+V1=7 V2=7 V3=4 VD=10
+DELAYTIME=400
+DELAYLEVEL=26
+
+// channel 1 - Melody ///////////////////////////
+
+@1
+
+ATTACKTIME=0
+PEAKLEVEL=95
+PEAKTIME=70
+DECAYTIME=40
+SUSTAINLEVEL=40
+RELEASETIME=80
+
+LFO=ON
+LFOWAIT=300
+LFOSPEED=6
+LFORANGE=20
+
+L16O5
+
+C~~~~~~~   ~~~~CDE-F G~~~~~~~ F~~~E-D~~
+E-DC~~~~~  ~~~~CDE-F G~~~~~~~ F~~~E-D~~
+E-~C>C~~~~ ~~~~C~~~
+D~~~~~~~   ~~~~~~~~  ~~~~~~~~ ~~~~~~~~<
+
+C~~~~~~~   ~~~~CDE-F G~~~~~~~ F~~~E-D~~
+E-DC~~~~~  ~~~~CDE-F G~~~~~~~ F~~~E-D~~
+C~~~~~~~   ~~~~C~~~  
+D~~~~~~~ <G~~~>D~~~  C~~~~~~~ ~~~~~~~~
+C~~~~~~~ E-~F~GB-~~>
+
+C~~~~~~~   ~~~~<A-~B-~>
+C~~~~~~~   E-~~~~~~~
+D~~~~~<B-~ ~~>C~<G~~~ ~~~~~~~~ ~~~~~~~~
+A-~~~~~~~  ~~~~F~G~
+A-~~~~~~~  B-~~~>C~~~<
+B-~~~~~E-~ ~~~~F~G~   ~~~~~~~~ ~~~~~~~~>
+
+C~~~~~~~   ~~~~<A-~B-~>
+C~~~~~~~   E-~~~~~~~
+D~~~~~<B-~ ~~>C~<G~~~ ~~~~~~~~ >F~~~G~~~
+A-~~~~~~~  ~~~~F~G~   A-~~~~~~~ A-~G~~~E-~
+F~~~~~<B-~ ~~~~~~B~   ~~~~~~~~ ~~~~~~~~
+
+O4
+C~~~~~~~ E-~F~GB-~~  C~~~~~~~ E-~F~GB-~~>
+C::C~~~~ ~~~~~~~~<   B::B~~~~ ~~~~~~~~>
+G~~~~~~~ ~~~~~~~~ 
+
+// channel 2 - bass /////////////////////////////
+
+@2
+
+ATTACKTIME=0
+PEAKLEVEL=95
+PEAKTIME=60
+DECAYTIME=40
+SUSTAINLEVEL=40
+RELEASETIME=80
+
+L16O2
+
+C:CCC:CC C:CCC:CC E-:E-E-E-:E-E- F:FFF:FF
+C:CCC:CC C:CCC:CC E-:E-E-E-:E-E- F:FFF:FF
+A-:A-A-A-:A-A- A-:A-A-A-:A-A-
+G:GGG:GG G:GGG:GG G:GGG:GG G:GGG:GG
+
+C:CCC:CC C:CCC:CC E-:E-E-E-:E-E- F:FFF:FF
+C:CCC:CC C:CCC:CC E-:E-E-E-:E-E- F:FFF:FF
+A-:A-A-A-:A-A- A-:A-A-A-:A-A-
+G:GGG:GG G:GGGE-D<B->
+C:C:<B->C:: CCE-:D<B-~~>
+C:C:<B->C:: CCDDE-E-GG
+
+A-:A-A-A-:A-A- A-:A-A-A-:A-A-
+A-:A-A-A-:A-A- A-:A-A-A-:A-A-
+G:GGG:GG G:GGG:GG
+G:GGG:GG G:GGG:GG
+F:FFF:FF F:FFF:FF
+F:FFF:FF F:FFF:FF
+E-:E-E-E-:E-E- E-:E-E-E-:E-F
+G:GGG:GG G:GGG:GG
+
+A-:A-A-A-:A-A- A-:A-A-A-:A-A-
+A-:A-A-A-:A-A- A-:A-A-A-:A-A-
+G:GGG:GG G:GGG:GG
+G:GGG:GG G:GGG:GG
+F:FFF:FF F:FFF:FF
+D-:D-D-D-:D-D- D-:D-D-D-:D-D-<
+B-:B-B-B-:B-B- B-:B-B-B-:B-B- 
+G:GGG:GG G:GGG:GG>
+
+C:C:<B->C:: E-E-F:GB-~~
+C:C:<B->C:: E-E-F:GB-~~>
+A-::A-~~~~  ~~~~~~~~
+G::G~~G~    G~G~G~G~
+G~G~G~G~    G~G~GB-~~   
+
+// channel 3 - Embelishment /////////////////////
+
+@3
+ATTACKTIME=0
+PEAKLEVEL=95
+PEAKTIME=70
+DECAYTIME=40
+SUSTAINLEVEL=40
+RELEASETIME=80
+
+LFO=ON
+LFOWAIT=300
+LFOSPEED=6
+LFORANGE=20
+
+L16O4
+
+GCCG~~~~    ~~~~~~~~ B-~~~~~~~ A~~~F~~~
+GCCG~~~~    ~~~~~~~~ B-~~~~~~~ A~~~F~~~
+A-E-CE-~~~~ ~~~~F~~~
+G~DG~~~~ B~GB~~~~    >D~<B>D~~~~ G~DG~~~~<
+
+GCCG~~~~    ~~~~~~~~  B-~~~~~~~ A~~~F~~~
+GCCG~~~~    ~~~~~~~~  B-~~~~~~~ A~~~F~~~
+E-~~~~~~~   A-~~~>C~~~<
+B-~~~~~~~   G~~~D<B-~~>
+C~~~~~~~    E-~F~GB-~~ >C~~~~~~~ C~D~E-G~~<
+
+A-~~~~~E-~    ~~~~C~~~    ~~~~E-~~~  A-~~~>C~~~<
+G~B-~>D~G~    ~~D~<B-~~~  G~B-~>D~G~ ~~D~<B-~G~
+F~~~C~F~      ~~~~A-~B-~> C~~~~~~~  F~~~~~~~
+E-~<B-~G~>E-~ <B-~G~>E-~<B-~>
+D~<B~G~>D~    <B ~G~>D~<B~
+
+A-~~~~~E-~    ~~~~C~~~    ~~~~E-~~~  A-~~~>C~~~<
+G~B-~>D~G~    ~~D~<B-~~~  G~B-~>D~G~ ~~D~<B-~G~
+F~~~~~>F~     ~~~~~~~~<   F~~~~~>F~  ~~~~E-~C~
+D~~~~~F~      ~~~~~~G~    ~~>D~E-~D~ F~E-~D~E-~
+
+O5
+C<GE->C<GE-CE-> C<GE->C<GE-CE->
+C<GE->C<GE-CE-> C<GE->C<GE-CE->
+>E-::E-~~<CC    E-E-A-A->CCE-E-
+D::D~~<<BB>     DDGGBB>DD<
+GD<BG>GD<BG>    GD<BG>GD<BG
+
+// Drum Channel /////////////////////////////////
+
+@D
+
+L16
+
+K::K ::HH S::: ::K:
+K::K ::HH S::h hHK:
+K::K ::HH S::: ::K:
+K::K ::HH S::h hHK:
+K::K ::HH S::: ::K:
+K::K ::HH S::h hHK:
+K::K ::HK sSKK SK[SS]S
+
+K::K ::HH S::: ::K:
+K::K ::HH S::h hHK:
+K::K ::HH S::: ::K:
+K::K ::HH S::h hHK:
+K::K ::HH S::: ::K:
+K::K ::HH S::h hHK:
+K:K: SK:: KHK: KhhS K:K: SK:S KhHk KSS[SS]
+
+K:HH S::k K:HH S::k
+K:HH S::k K:HH SHK:
+K:HH S::k K:HH S::k
+K:HH S::k K:HH SHK:
+
+K:HH S::k K:HH S::k
+K:HH S::k K:HH SHK:
+K:HH S::k K:HH S::k
+KhSh S:Ks SsSs sSK:
+
+K:HH S::k K:HH S::k
+K:HH S::k K:HH SHK:
+K:HH S::k K:HH S::k
+K:HH S::k K:HH SHK:
+
+K:HH S::k K:HH S::k
+K:HH S::k K:HH SHK:
+K:HH S::k K:HH S::k
+K:HK sSKK KsSs SssS
+
+K:K: SK:: K:K: SKHH
+K:K: SK:: K:Kh sS[SS]S
+K::K :::: ::HH [HH]HHH
+K::K :::: :[HH]KK sSKK
+ssss ssss [SS]SSS [SS]SSS

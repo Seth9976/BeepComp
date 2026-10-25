@@ -1,0 +1,53 @@
+/////////////////////////////////////////////////
+//                                             //
+//  Xanadu background music (Falcom 1985)      //
+//                                             //
+//                Composer: Toshiya Takahashi  //
+//                    Album "All Over Xanadu"  //
+//               (c) Nihon Falcom Corporation  //
+//                                             //
+/////////////////////////////////////////////////
+
+//////////////////// global channel
+
+@G
+
+MASTERVOLUME=75
+TEMPO=132
+DELAYTIME=454
+V1=8 V2=8 V3=5 VD=0
+
+//////////////////// channel 1 - melody
+	
+@1
+
+LFO=ON
+
+O5L8::C<B~A-B~A-G~[8A-GF]G~~G~~:GFDA-G
+::>C<B~A-B~A-G~[8A-GF]G~~G~~:GFDA-G
+A-~A-G~GA-~A-G>C<BA-~A-G~GA-~A-:G~
+A-~A-G~GA-~A-G>C<BA-~A-G~GA-~A-L16G~~G~~G~~G~~
+
+//////////////////// channel 2 - bass
+	
+@2
+
+O3L8
+
+CE-~DF~E-G~DF~CE-~DF~:<B-A-F>C<B>
+CE-~DF~E-G~DF~CE-~DF~:<B-A-F>C<B>
+L16F~~EF~E-~~DE-~F~~EF~E-~~DE-~F~~EF~E-~~DE-~F~~EF~::E-~~~
+L16F~~EF~E-~~DE-~F~~EF~E-~~DE-~F~~EF~E-~~DE-~F~~EF~D~~D~~D~~D~~
+C~E-DE-~D~FEF~E-~GF#G~D~FEF~
+
+//////////////////// channel 3 - harmony line
+	
+@3
+
+LFO=ON
+O4L8
+
+::::::::::::::::::::::::
+L8E-G>E-D~<B>D~C<B~>[8C<BA-]B~~B~~:BA-F>C<B
+::::::::::::::::::::::::
+L16>C~~<B>C~C~~<B>C~C~~<B>C~C~E-~D~C~~<B>C~C~~<B>C~C~~<B>C~<B~~B~~B~~B~~

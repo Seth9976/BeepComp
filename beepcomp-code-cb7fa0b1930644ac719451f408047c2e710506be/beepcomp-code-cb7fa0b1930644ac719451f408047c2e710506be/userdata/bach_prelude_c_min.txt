@@ -1,0 +1,300 @@
+/////////////////////////////////////////////////
+//
+//  Prelude in C minor (BWV-847)
+//  J.S. Bach
+//
+//             You can use a pulse wave to sound
+//          a little bit like the harpsichord :)
+
+/////////////////////////////////////////////////
+
+@G
+
+MASTERVOLUME=72
+TEMPO=120
+DELAYTIME=500
+DELAYLEVEL=30
+LOOP=OFF
+V1=8 V2=8 V3=5 V4=5 V5=5
+
+//////////////////////////// ch 1 - top voice ///
+
+@1
+
+PRESET=BELL
+ATTACKTIME=6
+DECAYTIME=500
+WAVEFORM=6
+O5
+
+L9 C< L11 E- L13 D L14 E- L16 CE-DE- >
+C<E-DE- CE-DE-
+{A-FEF CFEF}
+{BFE-F DFE-F}>
+{C<GFG E-GFG>}
+
+{E-<A-GA- E-A-GA->}
+{D<F#EF# DF#EF#>}
+{D<GF#G DGF#G>}
+{C<EDE CEDE>}
+
+{C<FEF CFEF>}<
+{B-FE-F DFE-F}
+{B-GFG E-GFG}
+{A-GFG E-GFG}
+
+{A-DCD <B->DCD}
+{G<B-A-B- >E-<B-A-B->}
+{FC<B->C <A>C<B->C}
+{FDCD <B>DCD}
+
+{FDCD <B>DCD}
+{E-C<B>C <G>C<B>C}<
+{F>E-DE- FE-DE-<}
+{F#>C<B>C E-C<B>C<}>
+
+{E-C<B>C <G>C<B>C}
+{F#C<B>C <A>C<B>C}
+{GC<B>C DC<B>C}
+{A-C<B>C DC<B>C}
+
+O2
+L9G L12B> L16DF A-FEF BF>D<B A-FEF<
+L12G> L16CE-G >C<GF#G >E-CGE- C<A-GA-<
+GA>F#>C E-C<B>C F#CAF# E-C<B>C
+
+O5
+L9:L12DL14CL16D L18E-C<B>C<A>C<B>CD<BAB
+GBAB> C<AGA F#AGA BGF#G
+L12D>L14GL18FG A-FE-F DFE-F GE-DE-
+CE-DE- FDCD <B>DCD E-C<B>C<
+G>C<B>C <A->FE-F <G>E-DE- <F>DCD<
+E->C<B>C <A-FE-F GE-DE- FL16DL12CL9D
+
+DECAYTIME=800
+L32 :::: L16E~~~~~~~
+DECAYTIME=500
+L20CDEFGA-B- >C<B-A-GF~L16GL10E
+
+DECAYTIME=800
+L32:::: L16F~~~~~~~
+DECAYTIME=500
+[6FGFE]FGA-G [6FE-DE-]L20FDE-L12F<
+
+L9B~L12:L16D FA-GF BF>D<F BA-GF
+E>D-<B-G >C<A-FA- GB-GE A-FDF
+EGEC FD<L12B>L9D<
+
+L9:GL12:>D L14EGB-G A->CFD FA->C<B>
+L10C<GL8FL4D
+DECAYTIME=1000
+L8E~~~~~~~
+
+///////////////////////////////// ch 2 - bass ///
+
+@2
+
+PRESET=BELL
+ATTACKTIME=6
+DECAYTIME=500
+WAVEFORM=6
+WAVEFLIP
+O3
+
+L9 C L11 G L13 F L14 G L16 E-GFG
+CGFG E-GFG
+{CA-GA- FA-GA-}
+{CA-GA- FA-GA-}
+{CE-DE- GE-DE-}
+
+{C>C<B->C< A->C<B->C<}
+{CAGA F#AGA}<
+{B->B-AB- GB-AB-<}
+{B->GFG EGFG<}
+
+{A->A-GA- FA-GA-<}
+{A->DCD FDCD<}
+{G>E-DE- GE-DE-<}>
+{CE-DE- A-E-DE-}
+
+{DFE-F A-FE-F}
+{E-GFG A-GFG}
+{E-AGA FAGA}
+{DFE-F A-FE-F}
+
+{CFEF A-FEF}
+{CE-DE- FE-DE-}<
+{A->C<B>C DC<B>C<}
+{A>E-DE- CE-DE-<}
+
+{G>E-DE- FE-DE-<}
+{G>E-DE- CE-DE-<}
+{G>E-DE- FE-DE-<}
+{G>E-DE- FE-DE-<}
+
+L9:L12:L16:: :::: :::: ::::
+L12:L16::: :::: :::: ::::
+:::: :::: :::: ::::
+
+DECAYTIME=800
+L18 G~~~ ~~~~ ~~~~ L9:L12:L14:L16:
+DECAYTIME=500
+L18 :>>DCDE-C<B>C<A>C<B>CD<BAB
+L12GL14BL18AB> C<A-GA- FAGA BGFG
+E->GFG A-FE-F DFE-F GE-DE-
+CE-DE- FDCD E-C<B>C D<BAB>
+CE-DE- <F>DCD <E->C<B>C <DL16BL12AL9B>
+
+DECAYTIME=800
+O3
+L16C~~~~~~~ L32::::
+L20::::::: ::::::L16:L10:
+L16C~~~~~~~ L32:::: L16
+[6::::]:::: [6::::]L20:::L12:
+
+L9:L16O2C~~ ~~~~ ~~~~ ~~ L9:L12:
+L16 :::: :::: :::: ::::
+:::: ::L12:L9:
+
+DECAYTIME=1000
+L14O2 C~~~ ~~~~ ~~~~ L9:: L12::
+L10::L8:L4:
+L8O3::::::::
+
+///////////////////// ch 3 - additional voice ///
+
+@3
+
+PRESET=BELL
+ATTACKTIME=6
+DECAYTIME=500
+WAVEFORM=6
+
+L9 : L11 : L13 : L14 : L16 ::::
+:::: ::::
+{6:::: ::::}
+{8:::: ::::}
+{8:::: ::::}
+{8:::: ::::}
+{8:::: ::::}
+{8:::: ::::}
+
+L9:L12:L16:: :::: :::: ::::
+L12:L16::: :::: :::: ::::
+:::: :::: :::: ::::
+
+L18 :::: :::: :::: L9:L12:L14:L16:
+L18 :::: :::: :::: ::::
+L12:L14:L18:: :::: :::: ::::
+:::: :::: :::: ::::
+:::: :::: :::: ::::
+:::: :::: :::: :L16:L12:L9:
+
+DECAYTIME=800
+O4
+L32::: L16C~~~~~~~ L32:
+L20::::::: ::::::L16:L10:
+L32::: L16C~~~~~~~ L32: L16
+[6::::]:::: [6::::]L20:::L12:
+
+O2
+L9::L16 B~~~~~~~~~~~~ L12:
+L16 :::: :::: :::: ::::
+:::: ::L12:L9:
+
+L9:: L14O3 C~~~ ~~~~ ~~~~ L12::
+L10::L8:L4:
+DECAYTIME=1000
+L8O4C~~~~~~~
+
+///////////////////// ch 4 - additional voice ///
+
+@4
+
+PRESET=BELL
+ATTACKTIME=6
+DECAYTIME=500
+WAVEFORM=6
+WAVEFLIP
+
+L9 : L11 : L13 : L14 : L16 ::::
+:::: ::::
+{6:::: ::::}
+{8:::: ::::}
+{8:::: ::::}
+{8:::: ::::}
+{8:::: ::::}
+{8:::: ::::}
+
+L9:L12:L16:: :::: :::: ::::
+L12:L16::: :::: :::: ::::
+:::: :::: :::: ::::
+
+L18 :::: :::: :::: L9:L12:L14:L16:
+L18 :::: :::: :::: ::::
+L12:L14:L18:: :::: :::: ::::
+:::: :::: :::: ::::
+:::: :::: :::: ::::
+:::: :::: :::: :L16:L12:L9:
+
+DECAYTIME=800
+O3
+L32:: L16 B-~~~~~~~ L32::
+L20::::::: ::::::L16:L10:
+L32:: L16A-~~~~~~~ L32:: L16
+[6::::]:::: [6::::]L20:::L12:
+
+L9:L16::: :::: :::: :: L9:L12:
+L16 :::: :::: :::: ::::
+:::: ::L12:L9:
+
+DECAYTIME=1000
+L14O2 :::: :::: :::: L9:: L12::
+L10::L8:L4:
+L8O3G~~~~~~~
+
+///////////////////// ch 5 - additional voice ///
+
+@5
+
+PRESET=BELL
+ATTACKTIME=6
+DECAYTIME=500
+WAVEFORM=6
+
+L9 : L11 : L13 : L14 : L16 ::::
+:::: ::::
+{6:::: ::::}
+{8:::: ::::}
+{8:::: ::::}
+{8:::: ::::}
+{8:::: ::::}
+{8:::: ::::}
+
+L9:L12:L16:: :::: :::: ::::
+L12:L16::: :::: :::: ::::
+:::: :::: :::: ::::
+
+L18 :::: :::: :::: L9:L12:L14:L16:
+L18 :::: :::: :::: ::::
+L12:L14:L18:: :::: :::: ::::
+:::: :::: :::: ::::
+:::: :::: :::: ::::
+:::: :::: :::: :L16:L12:L9:
+
+DECAYTIME=800
+O3
+L32: L16G~~~~~~~ L32:::
+L20::::::: ::::::L16:L10:
+L16
+L32: L16F~~~~~~~ L32::: L16
+[6::::]:::: [6::::]L20:::L12:
+
+L9:L16::: :::: :::: :: L9:L12:
+L16 :::: :::: :::: ::::
+:::: ::L12:L9:
+
+DECAYTIME=1000
+L14O2 :::: :::: :::: L9:: L12::
+L10::L8:L4:
+L8O3::::::::
